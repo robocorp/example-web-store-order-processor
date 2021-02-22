@@ -6,7 +6,7 @@ automation. Uses local or cloud vault for credentials.
 
 ## Configure local vault
 
-See https://robocorp.com/docs/development-howtos/variables-and-secrets/vault
+See https://robocorp.com/docs/development-guide/variables-and-secrets/vault
 
 Paste this content in the vault file:
 
