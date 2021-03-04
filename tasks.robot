@@ -11,7 +11,7 @@ Documentation     Swag order robot. Places orders at https://www.saucedemo.com/
 ...               cloud vault for credentials.
 Library           OperatingSystem
 Library           Orders
-Library           RPA.Browser
+Library           RPA.Browser.Selenium
 Library           RPA.HTTP
 Library           RPA.Robocloud.Secrets
 
