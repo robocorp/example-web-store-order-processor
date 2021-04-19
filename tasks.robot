@@ -114,14 +114,14 @@ Assert one product in cart
 *** Keywords ***
 Checkout
     [Arguments]    ${order}
-    Click Link    css:.checkout_button
+    Click Button    css:#checkout
     Assert checkout information page
     Input Text    first-name    ${order["first_name"]}
     Input Text    last-name    ${order["last_name"]}
     Input Text    postal-code    ${order["zip"]}
     Submit Form
     Assert checkout confirmation page
-    Click Element When Visible    css:.btn_action
+    Click Element When Visible    css:#finish
     Assert checkout complete page
 
 *** Keywords ***
