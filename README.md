@@ -24,7 +24,7 @@ In `devdata/env.json`, edit the `RPA_SECRET_FILE` variable to point to the
 for example, `"/Users/<username>/vault.json"` or `"/home/<username>/vault.json"`.
 On Windows 10, you need to escape the path, for example, `"C:\\Users\\User\\vault.json"`.
 
-### Robocorp Cloud
+### Control Room
 
 Configure your vault using the UI. The name of the vault should be `swaglabs`.
 Provide the user name and the password as key-value pairs (see the vault file
