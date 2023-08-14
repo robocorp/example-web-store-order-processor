@@ -12,9 +12,9 @@ Library             RPA.Robocorp.Vault
 
 
 *** Variables ***
-${EXCEL_FILE_NAME}=     Data.xlsx
-${EXCEL_FILE_URL}=      https://github.com/robocorp/example-activities/raw/master/web-store-order-processor/devdata/${EXCEL_FILE_NAME}
-${SWAG_LABS_URL}=       https://www.saucedemo.com
+${EXCEL_FILE_NAME} =     Data.xlsx
+${EXCEL_FILE_URL} =      https://github.com/robocorp/example-web-store-order-processor/raw/main/devdata/${EXCEL_FILE_NAME}
+${SWAG_LABS_URL} =       https://www.saucedemo.com
 
 
 *** Tasks ***
@@ -48,8 +48,9 @@ Assert logged in
     Location Should Be    ${SWAG_LABS_URL}/inventory.html
 
 Collect orders
-    Download    ${EXCEL_FILE_URL}    overwrite=True
-    ${orders}=    Get orders    ${EXCEL_FILE_NAME}
+    ${data_path} =    Set Variable    ${OUTPUT_DIR}${/}${EXCEL_FILE_NAME}
+    Download    ${EXCEL_FILE_URL}    target_file=${data_path}    overwrite=${True}
+    ${orders}=    Get orders    ${data_path}
     RETURN    ${orders}
 
 Process order
