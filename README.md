@@ -1,6 +1,6 @@
 # Web store order processor example robot
 
-![Orders Excel file](./orders-excel.png)
+![Orders Excel file](readme-resources/orders-excel.png)
 
 This example robot orders swag from a [web store](https://www.saucedemo.com/) based on an Excel file. The robot uses credentials stored in a _vault_ file for logging into the store.
 
